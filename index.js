@@ -2,24 +2,14 @@ var buttonFixed = document.querySelectorAll(".home-btn-container-fixed")[0]
 var heroFotoProduk = document.querySelectorAll(".hero-foto-produk")[0]
 var fotoProduk = document.getElementsByClassName("foto-produk")
 
-var imageFilename = {
-    "file:///D:/VS%20Code/html/Bussiness%20Web/img/wifi-cctv-1.jpg": "img/wifi-cctv-1.jpg",
-    "file:///D:/VS%20Code/html/Bussiness%20Web/img/wifi-cctv-2.jpg": "img/wifi-cctv-2.jpg",
-    "file:///D:/VS%20Code/html/Bussiness%20Web/img/wifi-cctv-3.jpg": "img/wifi-cctv-3.jpg",
-    "file:///D:/VS%20Code/html/Bussiness%20Web/img/wifi-cctv-4.jpg": "img/wifi-cctv-4.jpg",
-    "file:///D:/VS%20Code/html/Bussiness%20Web/img/wifi-cctv-5.jpg": "img/wifi-cctv-5.jpg",
-    "file:///D:/VS%20Code/html/Bussiness%20Web/img/wifi-cctv-6.jpg": "img/wifi-cctv-6.jpg",
-}
-
-var fotoProdukChildNumber = [
-    "file:///D:/VS%20Code/html/Bussiness%20Web/img/wifi-cctv-1.jpg",
-    "file:///D:/VS%20Code/html/Bussiness%20Web/img/wifi-cctv-2.jpg",
-    "file:///D:/VS%20Code/html/Bussiness%20Web/img/wifi-cctv-3.jpg",
-    "file:///D:/VS%20Code/html/Bussiness%20Web/img/wifi-cctv-4.jpg",
-    "file:///D:/VS%20Code/html/Bussiness%20Web/img/wifi-cctv-5.jpg",
-    "file:///D:/VS%20Code/html/Bussiness%20Web/img/wifi-cctv-6.jpg"
+var imageFilename = [
+    "img/wifi-cctv-1.jpg",
+    "img/wifi-cctv-2.jpg",
+    "img/wifi-cctv-3.jpg",
+    "img/wifi-cctv-4.jpg",
+    "img/wifi-cctv-5.jpg",
+    "img/wifi-cctv-6.jpg"
 ]
-
 
 window.onscroll = function(){
     if(window.pageYOffset > 900){
@@ -31,12 +21,12 @@ window.onscroll = function(){
 
 
 function klikFoto(){
-    var fileName = imageFilename[this.src]
-    var childNumber = fotoProdukChildNumber.indexOf(this.src)
+    var filename = this.src.slice(-19)
+    var childNumber = imageFilename.indexOf(filename)
     for(var i = 0; i < 6; i++){
-        fotoProduk[i].classList.remove("active")
+        fotoProduk[i].classList.remove("active") 
     }
-    heroFotoProduk.src = fileName
+    heroFotoProduk.src = filename
     fotoProduk[childNumber].classList.add("active")
 }
 
@@ -44,3 +34,22 @@ function klikFoto(){
 for(var i = 0; i < 6; i++){
     fotoProduk[i].onclick = klikFoto
 }
+
+
+var btnSelengkapnya = document.querySelectorAll(".btn-selengkapnya")[0]
+var spesifikasiDeskripsi = document.querySelectorAll(".spesifikasi-deskripsi")[0]
+var paragraph2 = document.querySelectorAll(".paragraph-2")[0]
+
+function selengkapnya(){
+    if(btnSelengkapnya.innerText == "Selengkapnya"){
+        spesifikasiDeskripsi.style.display = "block"
+        paragraph2.style.display = "block"
+        btnSelengkapnya.innerText = "Kecilkan"
+    } else if(btnSelengkapnya.innerText == "Kecilkan"){
+        spesifikasiDeskripsi.style.display = "none"
+        paragraph2.style.display = "none"
+        btnSelengkapnya.innerText = "Selengkapnya"
+    }
+}
+
+btnSelengkapnya.onclick = selengkapnya
