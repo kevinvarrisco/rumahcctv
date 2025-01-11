@@ -211,6 +211,7 @@
     font-weight: 300;
     cursor: pointer;
     opacity: 0.7;
+    text-decoration: underline;
 }
 
 .spesifikasi-text-container p{
