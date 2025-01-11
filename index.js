@@ -53,3 +53,9 @@ function selengkapnya(){
 }
 
 btnSelengkapnya.onclick = selengkapnya
+
+var homeButton = document.getElementsByClassName("home-btn")
+setInterval(function(){
+    homeButton[0].classList.toggle("dance")
+    homeButton[1].classList.toggle("dance")
+}, 300)

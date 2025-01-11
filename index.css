@@ -7,7 +7,7 @@
 .home-container{
     width: 100%;
     height: 100%;
-    background-color: #57bcff;
+    background-color: #98d4ff;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -73,6 +73,10 @@
     transition: 500ms;
 }
 
+.dance{
+    margin-bottom: -3px;
+}
+
 .home-btn{
     width: 80%;
     background-color: rgb(2, 207, 43);
@@ -87,6 +91,7 @@
     letter-spacing: 0.5px;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
     box-shadow: 1px 1px 3px rgba(75, 75, 75, 0.5);
+    transition: 150ms;
 }
 
 .home-btn::after{
@@ -104,7 +109,7 @@
 
 .masalah-solusi-container{
     width: 100%;
-    background-color: #57bcff;
+    background-color: #98d4ff;
     padding: 30px 10%;
     display: flex;
     flex-direction: column;
@@ -132,7 +137,7 @@
 
 .speksifikasi-container{
     width: 100%;
-    background-color: #57bcff;
+    background-color: #98d4ff;
     padding: 30px 0;
     display: flex;
     flex-direction: column;
@@ -261,7 +266,7 @@
 
 .harga-produk-container{
     width: 100%;
-    background-color: #57bcff;
+    background-color: #98d4ff;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -286,7 +291,7 @@
     color: rgb(255, 255, 255);
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.674);
     text-align: center;
-    margin-bottom: 120px;
+    margin-bottom: 180px;
 }
 
 .harga-produk-text h1{
